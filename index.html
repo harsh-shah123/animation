@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- w3school -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-462758aa1e172f82d39e1ea35e919e0a.css?vsn=d" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" />
+
+    <link rel="shortcut icon" href="./assets/icon/icon-1.avif" type="image/x-icon" />
+
+    <style>
+        .image1:hover{
+            
+        }
+
+        .asdd {
+            background-color: white;
+
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            padding-left: 2%;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .asdd {
+                height: 60vh;
+                padding-left: 2%;
+            }
+
+            .overlay-text,
+            .overlay-text2 {
+                padding: 15px;
+            }
+
+            .campaign-section {
+                height: 60vh;
+                padding-left: 2%;
+            }
+
+            .campaign-text {
+                max-width: 100%;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .asdd {
+                height: 50vh;
+                padding-left: 1%;
+            }
+
+            .overlay-text,
+            .overlay-text2 {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .campaign-section {
+                height: 50vh;
+                padding-left: 1%;
+            }
+
+            .campaign-text {
+                max-width: 100%;
+                font-size: 0.8em;
+            }
+        }
+
+        .overlay-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .overlay-text {
+            color: white;
+            max-width: 500px;
+            z-index: 1;
+        }
+
+        .overlay-text2 {
+            background-color: rgb(41, 39, 39);
+            height: 12vh;
+
+            width: 100%;
+        }
+
+        .sticky {
+            position: sticky;
+            width: 100%;
+            margin: 2px;
+        }
+
+        .asd {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navi:hover {
+            color: green;
+        }
+
+        #dropdown-products {
+            display: none;
+        }
+
+        #menu-products:hover #dropdown-products {
+            /* display: inline-flex; */
+            flex-flow: column;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="full-screen-preview">
+    <header>
+        <section>
+            <!-- sticky element -->
+            <div class="row sticky bg-dark">
+                <div class="d-flex justify-content-between">
+                    <span>
+                        <h3 class="text-white"><b>evento</b>market</h3>
+                    </span>
+                    <div class="btn">
+                        <button class="btn bg-success text-white">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section>
+            <div class="row bg-light ms-2 me-4 col-md-12 col-sm-6" >
+                <div class="d-flex justify-content-between">
+                    <span>
+                        <h2 ><b>digiqu.</b></h2>
+                    </span>
+                    <div class="nav mt-4">
+                        <ul class="nav">
+                        <li><a href="#" class="text-success display-6">Home</a></li>
+                        <li><a href="#" class="text-dark display-6">About Us</a></li>
+                        <li><a href="#" class="text-dark display-6">Services</a></li>   
+                        <li><a href="#" class="text-dark display-6">Pages</a></li>   
+                        <li><a href="#" class="btn bg-dark text-white display-5">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section>
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                    <div class="container">
+                        <span class="" style="font-size: 2.5rem; font-weight: bold">digiqu.</span>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto" style="font-size: 1.3rem">
+                                <li class="nav-item">
+                                    <a class="nav-link navi" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link navi" href="#">About Us</a>
+                                </li>
+                                <li class="nav-item" id="menu-products">
+                                    <a class="nav-link navi" href="#">Services</a>
+                                    <ul type="none" id="dropdown-products" style="text-decoration: none">
+                                        <li>
+                                            <a href="#" class="dropdown-item navi">Service Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item" id="menu-products">
+                                    <a class="nav-link navi" href="#">Pages</a>
+                                    <!-- <ul class="dropdown" type="none" id="dropdown-products"  >
+                                        <li><a href="#" class="dropdown-item navi link">Protfolio</a></li>
+                                        <li><a href="#" class="dropdown-item navi link">FAQ Pages</a></li>
+                                        <li><a href="#" class="dropdown-item navi link">Team</a></li>
+                                        <li><a href="#" class="dropdown-item navi link">Pricing Plan</a></li>
+                                        <li><a href="#" class="dropdown-item navi link">404 page</a></li>
+                                        <li><a href="#" class="dropdown-item navi link">Comming Soon</a></li>
+                                        <li><a href="#" class="dropdown-item navi link">Block</a></li>
+                                    </ul></li> -->
+                                </li>
+                            </ul>
+
+                            <a href="#" class="btn btn-dark ms-3" style="border-radius: 10%">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section>
+            <div class="row">
+                <div class="asdd">
+                    <div class="col-6">
+                        <div class="overlay-container">
+                            <div class="overlay-text">
+                                <p class="text-success" style="font-size: larger">
+                                    Your Trusted partner of innovative digital solutions
+                                </p>
+                                <strong class="mb-0 pb-0">
+                                    <p class="text-dark mb-0 pb-0" style="font-size: 80px">
+                                        Unlocking</p>
+                                        <p  class="text-dark mb-0" style="font-size: 80px">Degital </p> <p  class="text-dark mb-0" style="font-size: 80px">Excellence </p> 
+                                    
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                    <dic class="col-6">
+                        <img src="./assets/images/image67.png" width="100%" alt="person" />
+                    </dic>
+                </div>
+            </div>
+            <div class="ms-2 row d-flex overlay-text2" style="border-radius: 50px;">
+            
+                <div class="col-1 ms-1 image1">
+                    <img src="./assets/images/arrow.png" alt="arrow" width="90px" style="border-radius: 50%"
+                        class="ms-3 mt-2" />
+                </div>
+
+                <div class="col-6">
+                    <p class="text-success mt-3 ms-4 mb-0" style="font-size: 20px">
+                        Get Started - Now
+                    </p>
+
+                    <p class="text-white ms-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab
+                        odit necessitatibus!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="row d-flex">
+        <div class="col-2">
+          <img src="./assets/images/arrow.png" width="100px" alt="asd" />
+        </div>
+        <div class="col-8">
+          <p></p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+            voluptates illo ducimus.
+          </p>
+        </div>
+      </div> -->
+    </main>
+
+    <footer>
+        <section></section>
+    </footer>
+</body>
+
+</html>
