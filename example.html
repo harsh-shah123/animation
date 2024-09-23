@@ -1,81 +1,928 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Page</title>
+
+  <!-- <link rel="stylesheet" href="./style.css" /> -->
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+
+
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-462758aa1e172f82d39e1ea35e919e0a.css?vsn=d">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/icon/icon-1.avif" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+
+  <style>
+    /* General Styles */
+    .mapping {
+        min-height: 260px;
+    }
+
+    .danger {
+        color: green;
+    }
+
+    .danger1 {
+        color: black;
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 4em auto;
+        overflow: hidden;
+    }
+
+    .buttons {
+        width: 100%;
+        margin: 0 0 1em 0;
+        text-align: right;
+    }
+
+    .buttons a {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 300%;
+    }
+
+    .buttons a:first-child {
+        margin: 0 10px 0 0;
+    }
+
+    .frame {
+        padding: 120px 0;
+        text-align: center;
+        box-sizing: border-box;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .frame i {
+        font-size: 500%;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .frame:nth-child(odd) {
+        background-color: #203763;
+    }
+
+    .frame:nth-child(even) {
+        background-color: #7a9a3e;
+    }
+
+    .marquee {
+        margin: 0em 10px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .marquee-box-one {
+        display: flex;
+        align-items: center;
+        animation: marquee 15s linear infinite;
+    }
+
+    .marquee-content-one {
+        display: flex;
+        gap: 40px;
+        padding: 0 20px;
+        animation: scroll-one 30s linear infinite;
+    }
+
+    .marquee-text {
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 35px;
+        font-weight: 100;
+        flex-shrink: 0;
+        margin: 0;
+        padding: 15px 30px;
+        border-radius: 50px;
+        color: white;
+        display: flex;
+        align-items: center;
+        user-select: none;
+    }
+
+    .marquee-text:hover {
+        background-color: #31393F;
+        border: 1px solid #31393F;
+    }
+
+    @keyframes scroll-one {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .accordion-button:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+        color: green;
+        text-decoration: none;
+    }
+
+    .img-hover-zoom {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .img-hover-zoom img {
+        transition: transform 0.4s ease;
+        width: 100%;
+        height: auto;
+    }
+
+    .img-hover-zoom:hover img {
+        transform: scale(0.8);
+    }
+
+    .asdd {
+        background-color: white;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
+        box-sizing: border-box;
+    }
+
+    .overlay-text {
+        color: white;
+        max-width: 500px;
+    }
+
+    .overlay-text p {
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    .overlay-text .subheading {
+        font-size: 1.2rem;
+        color: green;
+    }
+
+    .overlay-text2 {
+        background-color: rgb(41, 39, 39);
+        border-radius: 50px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .overlay-text3 {
+        background-color: white;
+        border-radius: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .custom-search {
+        position: relative;
+        width: 500px;
+        margin: 10px;
+    }
+
+    .custom-search-input {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 100px;
+        padding: 10px 100px 10px 20px;
+        line-height: 1;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .custom-search-button {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        bottom: 3px;
+        border: 0;
+        background: black;
+        color: #fff;
+        outline: none;
+        margin: 0;
+        padding: 0 10px;
+        border-radius: 100px;
+        z-index: 2;
+    }
+
+    .image1 img {
+        border-radius: 50%;
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1200px) {
+        .col-4 {
+            flex: 0 0 48%; /* Adjust to two columns on medium screens */
+            max-width: 48%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .mapping {
+            flex-direction: column; /* Stack elements vertically on smaller screens */
+            text-align: center; /* Center text for better readability */
+        }
+
+        .danger {
+            margin-bottom: 1em; /* Add margin between lists */
+        }
+
+        .col-4 {
+            flex: 0 0 100%; /* Stack columns on smaller screens */
+            max-width: 100%;
+        }
+
+        .marquee-text2 {
+            font-size: 20px; /* Adjust font size for smaller screens */
+        }
+
+        .btn {
+            width: 100%; /* Make button full width */
+        }
+
+        h3 {
+            font-size: 1.5rem; /* Adjust heading size for smaller screens */
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .overlay-text {
+            text-align: center;
+        }
+
+        .overlay-text2 {
+            text-align: left;
+        }
+
+        .col-md-6 img {
+            height: auto;
+            max-height: 400px;
+        }
+
+        .image1 img {
+            width: 70px;
+        }
+
+        .navbar-nav {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 32px;
+        }
+
+        .accordion-button h3 {
+            font-size: 1rem;
+        }
+
+        .custom-search {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .custom-search-input {
+            margin-bottom: 1rem;
+        }
+
+        .custom-search-button {
+            width: 100%;
+        }
+
+        .marquee-text img {
+            height: 60px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .danger1 {
+            font-size: 14px; /* Adjust font size for mobile devices */
+        }
+
+        h1 {
+            font-size: 2rem; /* Adjust heading size */
+        }
+
+        h5 {
+            font-size: 1.2rem; /* Adjust subheading size */
+        }
+
+        p {
+            font-size: 0.9rem; /* Adjust paragraph size */
+        }
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Public+Sans:wght@100&display=swap');
+</style>
+
+
+
+
+
+
 </head>
+
+
+<header>
+  <!-- Sticky header -->
+  <div class="sticky-top">
+      <div class="row bg-dark">
+          <div class="d-flex justify-content-between align-items-center" style="height: 60px;">
+              <span>
+                  <h3 class="text-white mb-0"><b>evento</b>market</h3>
+              </span>
+              <div class="btn">
+                  <button class="btn bg-success text-white">Buy Now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Main navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+      <div class="container">
+          <a class="navbar-brand" href="#">digiqu.</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto" style="font-size: 1.8rem;">
+                  <li class="nav-item">
+                      <a class="nav-link navi" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link navi" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link navi" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link navi" href="#">Pages</a>
+                  </li>
+              </ul>
+              <a href="#" class="btn btn-dark ms-3">Contact</a>
+          </div>
+      </div>
+  </nav>
+</header>
+
+<main>
+  <section class="container-fluid" style="overflow: hidden;">
+    <div class="row asdd">
+        <div class="col-md-6">
+            <div class="overlay-container">
+                <div class="overlay-text mb-5">
+                    <p class="subheading">Your Trusted Partner for Innovative Digital Solutions</p>
+                    <b>
+                        <p class="display-1 mb-0"><strong>Unlocking</strong></p>
+                        <p class="display-1 mb-0"><strong>Digital</strong></p>
+                        <p class="display-1 mb-0"><strong>Excellence</strong></p>
+                    </b>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="overflow: hidden;">
+            <img src="./assets/images/person-2.jfif" class="img-fluid" height="500px" alt="person" />
+        </div>
+    </div>
+
+    <div class="row mt-4 overlay-text2 mt-5">
+        <div class="col-md-1 image1 img-hover-zoom">
+            <img src="./assets/images/arrow.png" alt="arrow" width="90px" />
+        </div>
+        <div class="col-md-6">
+            <p class="text-success mt-3 ms-4">Get Started - Now</p>
+            <p class="text-white ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab odit
+                necessitatibus!</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="mt-5 bg-light">
+  <!-- marquee -->
+  <div class="row">
+      <div class="col">
+          <div class="marquee">
+              <div class="marquee-box-one">
+                  <div class="marquee-content-one">
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-1.png" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-3.webp" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-4.jpg" alt="icon-1" height="80px"></h2>
+                      <!-- content-duplicate -->
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-1.png" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-3.webp" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-4.jpg" alt="icon-1" height="80px"></h2>
+                  </div>
+                  <div class="marquee-content-one">
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-1.png" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-3.webp" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-4.jpg" alt="icon-1" height="80px"></h2>
+                      <!-- content-duplicate -->
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-1.png" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-3.webp" alt="icon-1" height="80px"></h2>
+                      <h2 class="marquee-text"><img src="./assets/icons/logo-4.jpg" alt="icon-1" height="80px"></h2>
+                  </div> <!-- marquee-content -->
+              </div> <!-- marquee-box-one -->
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- aa responsive nathi thato khbr nai kem  -->
+<section class="bg-dark text-white pb-5">
+  <!-- Passion and Volumes part -->
+  <div class="container">
+      <div class="row">
+          <div class="col-1"></div>
+          <div class="col-5 mt-5 col-sm-6 me-0">
+              <div style="overflow: hidden;">
+                  <img src="./assets/images/grp-1.jfif" alt="grp-1" class="img-fluid" width="600" height="350"
+                      style="border-radius: 50px;">
+              </div>
+          </div>
+          <div class="col-lg-5 mt-5" style="overflow: hidden;">
+              <p style="font-size: 45px;"><b>Our passion for <br> innovation</b></p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, natus Lorem ipsum dolor
+                  laudantium perspiciatis nesciunt molestiae consequatur.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates officia voluptas
+                  similique et est voluptatem odit facilis, distinctio reiciendis!</p>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-12 col-md-5 mt-5 me-0">
+            <div>
+                <p style="font-size: 45px;"><b>Expertise that Speaks Volumes</b></p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio deserunt sapiente
+                    aspernatur.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi accusantium reprehenderit
+                    tenetur!</p>
+            </div>
+            
+            <div class="text-dark overlay-text3 mb-3 d-flex align-items-center">
+                <div class="col-md-1 image1 img-hover-zoom">
+                    <img src="./assets/images/arrow.png" alt="arrow" width="100px" />
+                </div>
+                <div>
+                    <div class="text-success ms-3"><b>Collaborative</b></div>
+                    <p class="text-dark ms-3">Lorem ipsumur adipisicing elit. Modi ab odit necessitatibus!</p>
+                </div>
+            </div>
+    
+            <div class="text-dark overlay-text3 mb-3 d-flex align-items-center">
+                <div class="col-md-1 image1 img-hover-zoom">
+                    <img src="./assets/images/arrow.png" alt="arrow" width="100px" />
+                </div>
+                <div>
+                    <div class="text-success ms-3"><b>Creativity</b></div>
+                    <p class="text-dark ms-3">Lorem ipsumur adipisicing elit. Modi ab odit necessitatibus!</p>
+                </div>
+            </div>
+    
+            <div class="text-dark overlay-text3 mb-3 d-flex align-items-center">
+                <div class="col-md-1 image1 img-hover-zoom">
+                    <img src="./assets/images/arrow.png" alt="arrow" width="100px" />
+                </div>
+                <div>
+                    <div class="text-success ms-3"><b>Excellence</b></div>
+                    <p class="text-dark ms-3">Lorem ipsumur adipisicing elit. Modi ab odit necessitatibus!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-lg-5 mt-5">
+            <img src="./assets/images/grp-2" alt="grp-2" class="img-fluid" style="border-radius: 50px;">
+        </div>
+    </div>
+    
+   
+    
+  </div>
+</section>
+
+<section class="mt-5 mb-5">
+    <div class="container">
+        <div>
+            <h1>Bringing ideas to life</h1>
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-lg-4 col-md-6 col-sm-12 bg-success text-white me-1 mb-3" style="border-radius: 50px;">
+                <span class="text-white bg-light ms-2 mt-2" style="border-radius: 50px;">
+                    <div class="col-2 bg-dark p-2" style="border-radius: 20px;">
+                        <h1>01</h1>
+                    </div>
+                </span>
+                <div>
+                    <h2>Discovery and Strategy</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore totam sit neque officiis. Commodi fugiat dolores vitae maxime modi. Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-3 me-1 mb-3" style="border-radius: 50px;">
+                <span class="text-dark bg-light ms-2 mt-2">
+                    <div class="col-2 p-2">
+                        <h1>02</h1>
+                    </div>
+                </span>
+                <div>
+                    <h2>Design and Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectt. Labore totam sit neque officiis. Commodi fugiat dolores vitae maxime modi. Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12 p-3 mb-3" style="border-radius: 50px;">
+                <span class="bg-light ms-2 mt-2" style="border-radius: 50px;">
+                    <div class="col-2 p-2" style="border-radius: 20px;">
+                        <h1>03</h1>
+                    </div>
+                </span>
+                <div>
+                    <h2>Launch and Optimization</h2>
+                    <p>Lorem ipsum dolor sit ame totam sit neque officiis. Commodi fugiat dolores vitae maxime modi. Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+  <div>
+      <h1>Our Comprehensive <br> Services Suite</h1>
+  </div>
+  <div class="row" style="overflow: hidden;">
+      <div class="col-5 mb-2">
+          <img src="./assets/images/team-work-1.jpg" alt="team-work-1" style="width: 100%; border-radius: 50px;">
+      </div>
+      <div class="col-5 mt-4 justify-content-center">
+          <h2>Web Design and Development</h2>
+          <p>Lorem ipsum dolor sit alias necessitatibus fugiat qui, perspiciatis eaque voluptatibus nesciunt quas doloribus.</p>
+      </div>
+      <div class="col mt-5">
+          <button class="bg-dark text-white p-3" style="border-radius: 50px;">Learn More - Now</button>
+      </div>
+      <div class="col-5 mb-2">
+          <img src="./assets/images/team-work-2.jpg" alt="team-work-2" style="width: 100%; border-radius: 50px;">
+      </div>
+      <div class="col-5 mt-4 justify-content-center">
+          <h2>Digital Marketing Strategy</h2>
+          <p>Lorem ipsum dolor sit amet sitatibus fugiat qui, perspiciatis eaque voluptatibus nesciunt quas doloribus.</p>
+      </div>
+      <div class="col mt-5">
+          <button class="bg-dark text-white p-3" style="border-radius: 50px;">Learn More - Now</button>
+      </div>
+      <div class="col-5 mb-2">
+          <img src="./assets/images/team-work-3.jpg" alt="team-work-3" style="width: 100%; border-radius: 50px;">
+      </div>
+      <div class="col-5 mt-4 justify-content-center">
+          <h2>E-commerce Solutions</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consequatur alias perspiciatis eaque voluptatibus nedoloribus.</p>
+      </div>
+      <div class="col mt-5">
+          <button class="bg-dark text-white p-3" style="border-radius: 50px;">Learn More - Now</button>
+      </div>
+      <div class="col-5 mb-2">
+          <img src="./assets/images/team-work-4.jpg" alt="team-work-4" style="width: 100%; border-radius: 50px;">
+      </div>
+      <div class="col-5 mt-4 justify-content-center">
+          <h2>Brand Identity and Design</h2>
+          <p>Lorem ipsum dolor sit amet consectet. Nihil consequatur alias necessitatibus fugiat qui, perspiciatis eaque voluptatibus.</p>
+      </div>
+      <div class="col mt-5">
+          <button class="bg-dark text-white p-3" style="border-radius: 50px;">Learn More - Now</button>
+      </div>
+  </div>
+</section>
+
+<section class="bg-dark text-white">
+    <div class="row">
+        <div class="col-md-6 p-4 me-5">
+            <iframe src="https://www.youtube.com/embed/IMxDeACOWCE?si=ChU7U3n7lR2s5Eh6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen controls style="border-radius: 50px; width: 100%; height: 700px;"></iframe>
+        </div>
+        <div class="col-md-5 p-5">
+            <h1>A Glance at Our Milestones</h1>
+            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt voluptatibus delectus neque sit quisquam tempora expedita possimus quis maxime.</p>
+
+            <div class="text-dark overlay-text3 mb-3 d-flex">
+                <div class="col-md-2 image1">
+                    <img src="./assets/images/briefcase" alt="briefcase" width="80px" />
+                </div>
+                <div>
+                    <div class="text-success ms-3 ps-3">
+                        <h2 class="display-5"><b>72 K<sup>+</sup></b></h2>
+                    </div>
+                    <p class="text-dark ms-3 ps-3" style="font-size: large;">Project Done</p>
+                </div>
+            </div>
+            <div class="text-dark overlay-text3 mb-3 d-flex">
+                <div class="col-md-2">
+                    <img src="./assets/images/profile.jpg" alt="briefcase" width="80px" />
+                </div>
+                <div>
+                    <div class="text-success ms-3 ps-3">
+                        <h2 class="display-5"><b>48 K <sup>+</sup> </b></h2>
+                    </div>
+                    <p class="text-dark ms-3 ps-3" style="font-size: large;">Happy Clients</p>
+                </div>
+            </div>
+            <div class="text-dark overlay-text3 mb-3 d-flex">
+                <div class="col-md-2">
+                    <img src="./assets/images/sandclock" alt="briefcase" width="80px" style="border-radius: 50px;" />
+                </div>
+                <div>
+                    <div class="text-success ms-3 ps-3">
+                        <h2 class="display-5"><b>16<sup>+</sup></b></h2>
+                    </div>
+                    <p class="text-dark ms-3 ps-3" style="font-size: large;">Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+  <div>
+      <h1>Our Diverse Portfolio of <br> Projects</h1>
+  </div>
+  <div class="row mt-4" style="overflow: hidden;">
+      <div class="col-8">
+          <img src="./assets/images/team-work-2.jpg" class="img-fluid" alt="work" style="border-radius: 50px;">
+      </div>
+      <div class="col">
+          <h2>Interactive Brand Website for Corporation</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus quidem quasi. Sed, fugiat Lorem, ipsum.</p>
+          <button class="bg-dark text-white p-3" style="border-radius: 50px;">Learn More - Now</button>
+      </div>
+  </div>
+  <div class="row mt-4" style="overflow: hidden;">
+      <div class="col-4 me-3">
+          <h2>Strategic Digital Marketing Campaign for Startup</h2>
+          <p>Lorem ipsum dolo Magnam doloribus quidem quasi. Lorem ipsum dolor sit. Sed, fugiat Lorem, ipsum.</p>
+          <button class="bg-dark text-white p-3" style="border-radius: 50px;">Learn More - Now</button>
+      </div>
+      <div class="col-7">
+          <img src="./assets/images/team-work-4.jpg" class="img-fluid" alt="work" style="border-radius: 50px;">
+      </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <!-- FAQs -->
+  <h1>Explore Our FAQ <br> Section </h1>
+
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <h3>1. What services do we offer?</h3>
+              </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque aliquid perspiciatis nobis eius cupiditate, aut harum quasi earum beatae, reprehenderit tenetur hic quis ex ratione eaque laudantium quia explicabo architecto accusantium laborum aliquam, ducimus recusandae. Sint ex a itaque assumenda veniam deleniti dolorum accusamus iste, nostrum suscipit laboriosam quia adipisci?</div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <h3>2. How do we approach project collaboration?</h3>
+              </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, vel perspiciatis eligendi ipsam dicta sed natus! Quia magnam necessitatibus natus laboriosam earum, harum, error suscipit quas molestiae pariatur perferendis possimus nam officia, voluptas atque maiores quis consectetur iste repellendus optio? Earum maiores nemo libero hic architecto, sed quidem fuga id!</div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <h3>3. Can we handle both small and large-scale projects?</h3>
+              </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum minus ad dolorem magni necessitatibus aliquid quibusdam consequatur, neque nisi sit maiores numquam quae beatae quasi culpa illum reiciendis quas iusto laudantium rerum. Sit vel ipsum expedita suscipit possimus laudantium ab cum neque aliquam adipisci tempora, dolor officia nesciunt at soluta? Nemo fugiat dolor quaerat rem?</div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  <h3>4. What sets us apart in the digital landscape?</h3>
+              </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum minus ad dolorem magni necessitatibus aliquid quibusdam consequatur, neque nisi sit maiores numquam quae beatae quasi culpa illum reiciendis quas iusto laudantium rerum. Sit vel ipsum expedita suscipit possimus laudantium ab cum neque aliquam adipisci tempora, dolor officia nesciunt at soluta? Nemo fugiat dolor quaerat rem?</div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  <h3>5. How do we ensure the security of digital solutions?</h3>
+              </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum minus ad dolorem magni necessitatibus aliquid quibusdam consequatur, neque nisi sit maiores numquam quae beatae quasi culpa illum reiciendis quas iusto laudantium rerum. Sit vel ipsum expedita suscipit possimus laudantium ab cum neque aliquam adipisci tempora, dolor officia nesciunt at soluta? Nemo fugiat dolor quaerat rem?</div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="text-white" style="background-color: black;">
+  <div class="row mt-5 me-5 ms-3 pt-5">
+      <div class="col-6 mt-4 ms-2">
+          <h1 style="font-weight: 700;">Subscribe for Exclusive <br> Updates and Insights</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. QWuam suscipit. Lorem ipsum dolor sit amet consectetur.</p>
+          <div class="custom-search">
+              <input type="text" class="custom-search-input" placeholder="Enter your email">
+              <button class="custom-search-button" type="submit">Sign up</button>
+          </div>
+      </div>
+      <div class="col">
+          <img src="./assets/images/person-5.jpg" style="max-width: 100%; height: auto;" alt="person-2">
+      </div>
+  </div>
+</section>
+
+<!-- marquee -->
+<section>
+  <div class="row bg-success">
+      <div class="col">
+          <div class="marquee">
+              <div class="marquee-box-1">
+                  <!-- <div class="marquee-content-1">
+                      <h6 class="marquee-text2">Get updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                  </div> -->
+                  <div class="marquee-content-one">
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                      <h6 class="marquee-text2">Get Updates<i class="fa-solid fa-circle-check"></i></h6>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+      <div class="d-flex sticky justify-content-between">
+          <span>
+              <h3>Latest news</h3>
+          </span>
+          <div class="btn">
+              <button class="btn bg-dark text-white">All - Blog Posts</button>
+          </div>
+      </div>
+  </div>
+
+  <div class="row mt-3" style="overflow: hidden;">
+      <div class="col-4 p-2">
+          <img src="./assets/images/team-work-4.jpg" alt="team-work-1" width="350px" style="border-radius: 50px;">
+          <h2>E-commerce: Strategies for success</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto assumenda nulla odit quidem porro incidunt sit tempora, nesciunt libero expedita accusantium possimus perferendis sint sunt! Voluptatibus modi culpa deserunt nostrum.</p>
+      </div>
+      <div class="col-4 p-2">
+          <img src="./assets/images/team-work-2.jpg" alt="team-work-1" width="350px" style="border-radius: 50px;">
+          <h2>E-commerce: Strategies for success</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto assumenda nulla odit quidem porro incidunt sit tempora, nesciunt libero expedita accusantium possimus perferendis sint sunt! Voluptatibus modi culpa deserunt nostrum.</p>
+      </div>
+      <div class="col-4 p-2">
+          <img src="./assets/images/team-work-1.jpg" alt="team-work-1" width="350px" style="border-radius: 50px;">
+          <h2>E-commerce: Strategies for success</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto assumenda nulla odit quidem porro incidunt sit tempora, nesciunt libero expedita accusantium possimus perferendis sint sunt! Voluptatibus modi culpa deserunt nostrum.</p>
+      </div>
+  </div>
+</section>
+
+<section>
+  <div class="row m-4">
+      <div class="d-flex sticky justify-content-between">
+          <span>
+              <h3>Contact us for a free Consultation today.</h3>
+          </span>
+          <div class="btn">
+              <button class="btn bg-dark text-white">Contact us now</button>
+          </div>
+      </div>
+  </div>
+  <hr style="height: 5px; color: black; background-color: black">
+</section>
+
+<section>
+  <!-- Footer links but not footers part -->
+  <section>
+      <!-- Map and Join Now -->
+      <div class="row">
+          <div class="mapping d-flex align-items-center justify-content-center" style="min-height: 260px;">
+              <div class="container-fluid py-4">
+                  <div class="container">
+                      <div class="row">
+                          <!-- Visla Section -->
+                          <div class="col-12 col-md-3 mb-4 mb-md-0">
+                              <h1>Digiqu<span class="text-success">.</span></h1>
+                              <p>Lorem ipsum dolor sit adipisicing elit. Quisquam molestiae dmaxime neque molestias voluptatum non laborum doloribus!</p>
+                          </div>
+                          <!-- Navigation Section -->
+                          <div class="col-12 col-md-3 mb-4 mb-md-0">
+                              <h5 class="pb-3">Navigation</h5>
+                              <ul class="danger">
+                                  <li><span class="danger1">FAQs</span></li>
+                                  <li><span class="danger1">Privacy Policy</span></li>
+                                  <li><span class="danger1">Terms & Conditions</span></li>
+                              </ul>
+                          </div>
+                          <!-- Working Hours Section -->
+                          <div class="col-12 col-md-3 mb-4 mb-md-0">
+                              <h5 class="pb-3">Contact Information</h5>
+                              <ul class="list-unstyled">
+                                  <li><i class="danger fa-solid fa-location-dot"></i> 1206</li>
+                                  <li><i class="danger fa-solid fa-envelope"></i> abc123@gmail.com</li>
+                                  <li><i class="danger fa-solid fa-phone"></i> +(91) 1234567890</li>
+                              </ul>
+                          </div>
+                          <!-- Company Section -->
+                          <div class="col-12 col-md-3">
+                              <h5 class="pb-3">Company</h5>
+                              <ul class="danger">
+                                  <li><span class="danger1">About</span></li>
+                                  <li><span class="danger1">Team</span></li>
+                                  <li><span class="danger1">Company</span></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</section>
+
+
+
+
+</main>
+
+
 <body>
 
-<div class="container mt-3">
-  <h2>Accordion Example</h2>
-  <p><strong>Note:</strong> The <strong>data-bs-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-  <div id="accordion">
-    <div class="card">
-      <div class="card-header">
-        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
-          Collapsible Group Item #1
-        </a>
-      </div>
-      <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-        Collapsible Group Item #2
-      </a>
-      </div>
-      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-          Collapsible Group Item #3
-        </a>
-      </div>
-      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
