@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 70vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        gap: 3px;
+        margin-top: 100px;
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 15px;
+        height: 80px;
+        border-radius: 7px;
+      }
+      body :first-child {
+        grid-column: 1 / span 1;
+        background-color: black;
+      }
+      body :nth-child(2) {
+        grid-column: 2 / span 1;
+        background-color: black;
+      }
+      body :nth-child(3) {
+        grid-column: 3 / span 1;
+        background-color: black;
+      }
+      body :nth-child(4) {
+        grid-column: 4 / span 1;
+        background-color: black;
+      }
+      body :nth-child(5) {
+        grid-column: 5 / span 1;
+        background-color: black;
+      }
+      body :nth-child(6) {
+        grid-column: 6 / span 1;
+        background-color: black;
+      }
+      body :nth-child(7) {
+        grid-column: 7 / span 1;
+        background-color: black;
+      }
+      body :nth-child(8) {
+        grid-column: 8 / span 1;
+        background-color: black;
+      }
+      body :nth-child(9) {
+        grid-column: 9 / span 1;
+        background-color: black;
+      }
+      body :nth-child(10) {
+        grid-column: 10 / span 1;
+        background-color: black;
+      }
+      body :nth-child(11) {
+        grid-column: 11 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(12) {
+        grid-column: 12 / span 1;
+        background-color: black;
+      }
+      body :nth-child(13) {
+        grid-column: 13 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(14) {
+        grid-column: 14 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(14)>div {
+    border-radius: 100%;
+    border: 20px solid grey;
+      }
+
+      body :nth-child(15) {
+        grid-column: 1 / span 1;
+        background-color: black;
+      }
+      body :nth-child(16) {
+        grid-column: 2 / span 1;
+        background-color: black;
+      }
+      body :nth-child(17) {
+        grid-column: 3 / span 1;
+        background-color: black;
+      }
+      body :nth-child(18) {
+        grid-column: 4 / span 1;
+        background-color: black;
+      }
+      body :nth-child(19) {
+        grid-column: 5 / span 1;
+        background-color: black;
+      }
+      body :nth-child(20) {
+        grid-column: 6 / span 1;
+        background-color: black;
+      }
+      body :nth-child(21) {
+        grid-column: 7 / span 1;
+        background-color: black;
+      }
+      body :nth-child(22) {
+        grid-column: 8 / span 1;
+        background-color: black;
+      }
+      body :nth-child(23) {
+        grid-column: 9 / span 1;
+        background-color: black;
+      }
+      body :nth-child(24) {
+        grid-column: 10 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(25) {
+        grid-column: 11 / span 1;
+        background-color: black;
+      }
+      body :nth-child(26) {
+        grid-column: 12 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(27) {
+        grid-column: 13 / span 1;
+        background-color: black;
+      }
+      body :nth-child(28) {
+        grid-column: 14 / span 1;
+        background-color: black;
+      }
+      body :nth-child(29) {
+        grid-column: 1 / span 1;
+        background-color: black;
+      }
+      body :nth-child(30) {
+        grid-column: 2 / span 1;
+        background-color: black;
+      }
+      body :nth-child(31) {
+        grid-column: 3 / span 1;
+        background-color: black;
+      }
+      body :nth-child(32) {
+        grid-column: 4 / span 1;
+        background-color: black;
+      }
+      body :nth-child(33) {
+        grid-column: 5 / span 1;
+        background-color: black;
+      }
+      body :nth-child(34) {
+        grid-column: 6 / span 1;
+        background-color: black;
+      }
+      body :nth-child(35) {
+        grid-column: 7 / span 1;
+        background-color: black;
+      }
+      body :nth-child(36) {
+        grid-column: 8 / span 1;
+        background-color: black;
+      }
+      body :nth-child(37) {
+        grid-column: 9 / span 1;
+        background-color: black;
+      }
+      body :nth-child(38) {
+        grid-column: 10 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(39) {
+        grid-column: 11 / span 1;
+        background-color: black;
+      }
+      body :nth-child(40) {
+        grid-column: 12 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(41) {
+        grid-column: 13 / span 1;
+        background-color: black;
+      }
+      body :nth-child(42) {
+        grid-column: 14 / span 1;
+        background-color: black;
+      }
+      body :nth-child(43) {
+        grid-column: 1 / span 1;
+        background-color: black;
+
+      }
+      body :nth-child(44) {
+        grid-column: 2 / span 1;
+        background-color: black;
+      }
+      body :nth-child(45) {
+        grid-column: 3 / span 1;
+        background-color: black;
+      }
+      body :nth-child(46) {
+        grid-column: 4 / span 1;
+        background-color: black;
+      }
+      body :nth-child(47) {
+        grid-column: 5 / span 1;
+        background-color: black;
+      }
+      body :nth-child(48) {
+        grid-column: 6 / span 1;
+        background-color: black;
+      }
+      body :nth-child(49) {
+        grid-column: 7 / span 1;
+        background-color: black;
+      }
+      body :nth-child(50) {
+        grid-column: 8 / span 1;
+        background-color: black;
+      }
+      body :nth-child(51) {
+        grid-column: 9 / span 1;
+        background-color: black;
+      }
+      body :nth-child(52) {
+        grid-column: 10 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(53) {
+        grid-column: 11 / span 1;
+        background-color: black;
+      }
+      body :nth-child(54) {
+        grid-column: 12 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(55) {
+        grid-column: 13 / span 2;
+        background-color: black;
+      }
+      body :nth-child(56) {
+        grid-column: 1 / span 2;
+        background-color: black;
+      }
+      body :nth-child(57) {
+        grid-column: 3 / span 1;
+        background-color: black;
+      }
+      body :nth-child(58) {
+        grid-column: 4 / span 1;
+        background-color: black;
+      }
+      body :nth-child(59) {
+        grid-column: 5 / span 1;
+        background-color: black;
+      }
+      body :nth-child(60) {
+        grid-column: 6 / span 1;
+        background-color: black;
+      }
+      body :nth-child(61) {
+        grid-column: 7 / span 1;
+        background-color: black;
+      }
+      body :nth-child(62) {
+        grid-column: 8 / span 1;
+        background-color: black;
+      }
+      body :nth-child(63) {
+        grid-column: 9 / span 1;
+        background-color: black;
+      }
+      body :nth-child(64) {
+        grid-column: 10 / span 1;
+        background-color: black;
+      }
+      body :nth-child(65) {
+        grid-column: 11 / span 1;
+        background-color: black;
+      }
+      body :nth-child(66) {
+        grid-column: 12 / span 1;
+        background-color: black;
+      }
+
+      body :nth-child(67) {
+        grid-column: 13 / span 2;
+        background-color: black;
+      }
+      body :nth-child(68) {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 2;
+        background-color: black;
+      }
+
+      body :nth-child(69) {
+        grid-column: 2 / span 1;
+        background-color: black;
+      }
+      body :nth-child(70) {
+        grid-column: 3 / span 1;
+        background-color: black;
+      }
+      body :nth-child(71) {
+        grid-column: 4 / span 1;
+        background-color: black;
+      }
+      body :nth-child(72) {
+        grid-column: 5 / span 5;
+        background-color: black;
+      }
+      body :nth-child(73) {
+        grid-column: 10 / span 1;
+        background-color: black;
+      }
+      body :nth-child(74) {
+        grid-column: 11 / span 1;
+        background-color: black;
+      }
+      body :nth-child(75) {
+        grid-column: 12 / span 1;
+        background-color: black;
+        height: 37px;
+        margin-top: 43px;
+      }
+      body :nth-child(76){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      body :nth-child(76) :first-child {
+        grid-column: 13 / span 1;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 7px;
+      }
+      body :nth-child(76) :last-child {
+        grid-column: 13 / span 1;
+        background-color:black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+        border-radius: 7px;
+      }
+      body :nth-child(77) {
+        grid-column: 14 / span 1;
+        background-color: black;
+        height: 37px;
+        margin-top: 43px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>esc</section>
+    <section>F1</section>
+    <section>F2</section>
+    <section>F3</section>
+    <section>F4</section>
+    <section>F5</section>
+    <section>F6</section>
+    <section>F7</section>
+    <section>F8</section>
+    <section>F9</section>
+    <section>F10</section>
+    <section>F11</section>
+    <section>F12</section>
+    <section>
+      <div></div>
+    </section>
+    <section>~</section>
+    <section>1</section>
+    <section>2</section>
+    <section>3</section>
+    <section>4</section>
+    <section>5</section>
+    <section>6</section>
+    <section>7</section>
+    <section>8</section>
+    <section>9</section>
+    <section>0</section>
+    <section>-</section>
+    <section>=</section>
+    <section>delete</section>
+    <section>tab</section>
+    <section>Q</section>
+    <section>W</section>
+    <section>E</section>
+    <section>R</section>
+    <section>T</section>
+    <section>Y</section>
+    <section>U</section>
+    <section>I</section>
+    <section>O</section>
+    <section>P</section>
+    <section>[</section>
+    <section>]</section>
+    <section>\</section>
+    <section>caps lock</section>
+    <section>A</section>
+    <section>S</section>
+    <section>D</section>
+    <section>F</section>
+    <section>G</section>
+    <section>H</section>
+    <section>J</section>
+    <section>K</section>
+    <section>L</section>
+    <section>;</section>
+    <section>'</section>
+    <section>return</section>
+    <section>shift</section>
+    <section>Z</section>
+    <section>X</section>
+    <section>C</section>
+    <section>V</section>
+    <section>B</section>
+    <section>N</section>
+    <section>M</section>
+    <section>,</section>
+    <section>.</section>
+    <section>/</section>
+    <section>shift</section>
+    <section>fn</section>
+    <section>control</section>
+    <section>option</section>
+    <section>command</section>
+    <section>space</section>
+    <section>command</section>
+    <section>option</section>
+    <section>left</section>
+    <section>
+      <div>up</div>
+      <div>down</div>
+    </section>
+    <section>right</section>
+  </body>
+</html>
